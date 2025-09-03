@@ -877,7 +877,7 @@
             "
             onmouseover="this.style.background='rgba(0, 61, 122, 1)'; this.style.transform='translateX(-5px)'; this.style.boxShadow='0 6px 16px rgba(0,0,0,0.3)'"
             onmouseout="this.style.background='rgba(0, 61, 122, 0.9)'; this.style.transform='translateX(0)'; this.style.boxShadow='0 4px 12px rgba(0,0,0,0.2)'">
-                📄 Projeto em DOC
+             Projeto em DOC
             </a>
             
             <!-- Botão Projeto em PPT -->
@@ -903,7 +903,7 @@
             "
             onmouseover="this.style.background='rgba(255, 102, 0, 1)'; this.style.transform='translateX(-5px)'; this.style.boxShadow='0 6px 16px rgba(255,102,0,0.4)'"
             onmouseout="this.style.background='rgba(255, 102, 0, 0.95)'; this.style.transform='translateX(0)'; this.style.boxShadow='0 4px 12px rgba(255,102,0,0.3)'">
-                📊 Projeto em PPT
+             Projeto em PPT
             </a>
         </div>
     </div>
@@ -1397,6 +1397,871 @@
                 transform: translateX(200%);
             }
         }
+/* ========================================
+   RESPONSIVE DESIGN - COMPLETO E OTIMIZADO
+   ======================================== */
+
+/* Desktop grande (acima de 15") */
+@media screen and (min-width: 1441px) {
+    .slide {
+        width: 90%;
+        height: 95vh;
+        padding: 80px;
+    }
+}
+
+/* Desktop médio (15") */
+@media screen and (max-width: 1440px) and (min-width: 1367px) {
+    .slide {
+        width: 92%;
+        height: 92vh;
+        padding: 70px;
+    }
+    
+    h1 { font-size: 64px; }
+    h2 { font-size: 40px; }
+    h3 { font-size: 32px; }
+}
+
+/* ========================================
+   LAYOUT UNIFICADO - PORTÁTEIS 13" E MOBILE
+   Aplicado para todos os ecrãs até 1366px
+   ======================================== */
+@media screen and (max-width: 1366px) {
+    /* Reset e configuração base */
+    * {
+        box-sizing: border-box !important;
+    }
+    
+    body {
+        overflow: hidden !important;
+        position: fixed !important;
+        width: 100% !important;
+        height: 100% !important;
+        margin: 0 !important;
+        padding: 0 !important;
+    }
+    
+    /* Container principal */
+    .presentation-container {
+        padding: 0 !important;
+        width: 100vw !important;
+        height: 100vh !important;
+        position: fixed !important;
+        top: 0 !important;
+        left: 0 !important;
+        margin: 0 !important;
+    }
+    
+    /* Slides - configuração para página completa */
+    .slide {
+        width: 100% !important;
+        height: calc(100vh - 90px) !important;
+        max-height: calc(100vh - 90px) !important;
+        border-radius: 0 !important;
+        padding: 30px !important;
+        padding-bottom: 30px !important;
+        margin: 0 !important;
+        position: absolute !important;
+        top: 0 !important;
+        left: 0 !important;
+        overflow-y: auto !important;
+        overflow-x: hidden !important;
+        -webkit-overflow-scrolling: touch !important;
+        box-shadow: none !important;
+    }
+    
+    /* Slide de capa otimizado */
+    .cover-slide {
+        padding: 40px !important;
+        display: flex !important;
+        flex-direction: column !important;
+        justify-content: center !important;
+        align-items: center !important;
+        text-align: center !important;
+        height: calc(100vh - 90px) !important;
+        overflow: hidden !important;
+    }
+    
+    /* Logo responsivo */
+    .logo-animation {
+        width: 120px !important;
+        height: 120px !important;
+        margin-bottom: 25px !important;
+    }
+    
+    /* Tipografia adaptada */
+    h1 {
+        font-size: 42px !important;
+        line-height: 1.2 !important;
+        margin-bottom: 20px !important;
+    }
+    
+    h2 {
+        font-size: 32px !important;
+        margin-bottom: 18px !important;
+        padding-bottom: 12px !important;
+    }
+    
+    h3 {
+        font-size: 26px !important;
+        margin: 15px 0 !important;
+    }
+    
+    h4 {
+        font-size: 22px !important;
+        margin: 12px 0 !important;
+    }
+    
+    .subtitle {
+        font-size: 20px !important;
+        line-height: 1.4 !important;
+        margin-bottom: 20px !important;
+    }
+    
+    /* Texto e parágrafos */
+    p {
+        font-size: 16px !important;
+        line-height: 1.6 !important;
+        margin: 12px 0 !important;
+    }
+    
+    ul, ol {
+        font-size: 15px !important;
+        padding-left: 25px !important;
+        margin: 12px 0 !important;
+    }
+    
+    li {
+        margin: 6px 0 !important;
+        line-height: 1.5 !important;
+    }
+    
+    /* Contador de slides */
+    .slide-counter {
+        position: fixed !important;
+        top: 10px !important;
+        right: 10px !important;
+        padding: 6px 12px !important;
+        font-size: 13px !important;
+        z-index: 100 !important;
+        background: rgba(255,255,255,0.95) !important;
+        border-radius: 15px !important;
+        box-shadow: 0 2px 10px rgba(0,0,0,0.1) !important;
+    }
+    
+    /* Story card */
+    .story-card {
+        padding: 20px !important;
+        font-size: 15px !important;
+        line-height: 1.6 !important;
+        margin: 15px 0 !important;
+    }
+    
+    /* Grids responsivos - 2 colunas para portáteis */
+    .swot-grid,
+    .tech-grid,
+    .infographic-grid {
+        grid-template-columns: repeat(2, 1fr) !important;
+        gap: 20px !important;
+        margin: 20px 0 !important;
+    }
+    
+    .swot-item {
+        padding: 18px !important;
+        font-size: 14px !important;
+    }
+    
+    /* KPI Dashboard - 2x2 grid */
+    .kpi-dashboard {
+        grid-template-columns: repeat(2, 1fr) !important;
+        gap: 15px !important;
+        margin: 20px 0 !important;
+    }
+    
+    .kpi-card {
+        padding: 15px !important;
+    }
+    
+    .kpi-icon {
+        font-size: 28px !important;
+        margin-bottom: 10px !important;
+    }
+    
+    .kpi-value {
+        font-size: 24px !important;
+    }
+    
+    .kpi-label {
+        font-size: 11px !important;
+    }
+    
+    /* Tabelas responsivas */
+    .canvas-table,
+    table {
+        font-size: 13px !important;
+        display: block !important;
+        overflow-x: auto !important;
+        max-width: 100% !important;
+    }
+    
+    .canvas-table th,
+    .canvas-table td,
+    table th,
+    table td {
+        padding: 8px !important;
+        font-size: 13px !important;
+    }
+    
+    /* NAVEGAÇÃO FIXA NO FUNDO */
+    .navigation {
+        position: fixed !important;
+        bottom: 0 !important;
+        left: 0 !important;
+        right: 0 !important;
+        width: 100% !important;
+        height: 90px !important;
+        transform: none !important;
+        padding: 15px !important;
+        border-radius: 0 !important;
+        background: rgba(255, 255, 255, 0.98) !important;
+        box-shadow: 0 -5px 25px rgba(0,0,0,0.1) !important;
+        display: flex !important;
+        justify-content: center !important;
+        align-items: center !important;
+        gap: 20px !important;
+        z-index: 9999 !important;
+        backdrop-filter: blur(10px) !important;
+    }
+    
+    .nav-btn {
+        padding: 12px 24px !important;
+        font-size: 14px !important;
+        min-width: 120px !important;
+        height: 50px !important;
+        border-radius: 25px !important;
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+        background: var(--norauto-blue) !important;
+        color: white !important;
+        border: 2px solid transparent !important;
+        transition: all 0.3s ease !important;
+    }
+    
+    .nav-btn:hover {
+        background: var(--norauto-orange) !important;
+        transform: translateY(-2px) !important;
+    }
+    
+    .nav-btn span {
+        display: inline !important;
+        margin-left: 5px !important;
+    }
+    
+    #fullscreenBtn {
+        background: var(--norauto-orange) !important;
+        min-width: auto !important;
+        padding: 12px 20px !important;
+    }
+    
+    .slide-indicator {
+        display: flex !important;
+        gap: 6px !important;
+        padding: 0 !important;
+        align-items: center !important;
+    }
+    
+    .indicator-dot {
+        width: 8px !important;
+        height: 8px !important;
+        background: #ccc !important;
+        transition: all 0.3s ease !important;
+    }
+    
+    .indicator-dot.active {
+        width: 20px !important;
+        height: 8px !important;
+        background: var(--norauto-orange) !important;
+    }
+    
+    /* Flow diagram */
+    .flow-diagram {
+        flex-direction: row !important;
+        flex-wrap: wrap !important;
+        gap: 20px !important;
+        justify-content: center !important;
+    }
+    
+    .flow-step {
+        width: calc(50% - 10px) !important;
+    }
+    
+    .flow-icon {
+        width: 80px !important;
+        height: 80px !important;
+        font-size: 32px !important;
+    }
+    
+    /* Progress bar */
+    .progress-bar {
+        height: 3px !important;
+        top: 0 !important;
+        position: fixed !important;
+        z-index: 10000 !important;
+    }
+}
+
+/* ========================================
+   AJUSTES ESPECÍFICOS PARA MOBILE
+   ======================================== */
+
+/* Tablets em modo portrait */
+@media screen and (max-width: 1024px) and (orientation: portrait) {
+    .slide {
+        padding: 25px !important;
+    }
+    
+    h1 { font-size: 36px !important; }
+    h2 { font-size: 28px !important; }
+    h3 { font-size: 22px !important; }
+    
+    .logo-animation {
+        width: 100px !important;
+        height: 100px !important;
+    }
+}
+
+/* Smartphones */
+@media screen and (max-width: 768px) {
+    .slide {
+        height: calc(100vh - 80px) !important;
+        padding: 15px !important;
+    }
+    
+    .navigation {
+        height: 80px !important;
+        padding: 10px !important;
+        gap: 10px !important;
+    }
+    
+    .nav-btn {
+        padding: 0 !important;
+        font-size: 0 !important;
+        width: 45px !important;
+        height: 45px !important;
+        min-width: 45px !important;
+        border-radius: 50% !important;
+    }
+    
+    .nav-btn span {
+        display: none !important;
+    }
+    
+    .nav-btn::after {
+        font-size: 18px !important;
+        color: white !important;
+        position: absolute !important;
+    }
+    
+    #prevBtn::after { content: "◀" !important; }
+    #nextBtn::after { content: "▶" !important; }
+    #fullscreenBtn::after { content: "⛶" !important; }
+    
+    h1 { font-size: 28px !important; }
+    h2 { font-size: 22px !important; }
+    h3 { font-size: 18px !important; }
+    .subtitle { font-size: 14px !important; }
+    p { font-size: 13px !important; }
+    
+    .logo-animation {
+        width: 80px !important;
+        height: 80px !important;
+    }
+    
+    /* Grids em coluna única */
+    .swot-grid,
+    .tech-grid,
+    .infographic-grid {
+        grid-template-columns: 1fr !important;
+        gap: 10px !important;
+    }
+    
+    .kpi-dashboard {
+        grid-template-columns: repeat(2, 1fr) !important;
+        gap: 8px !important;
+    }
+}
+
+/* Mobile muito pequeno */
+@media screen and (max-width: 375px) {
+    h1 { font-size: 24px !important; }
+    h2 { font-size: 20px !important; }
+    h3 { font-size: 16px !important; }
+    
+    .slide {
+        padding: 12px !important;
+    }
+    
+    .kpi-dashboard {
+        grid-template-columns: 1fr !important;
+    }
+}
+
+/* Landscape mobile */
+@media screen and (max-height: 600px) and (orientation: landscape) {
+    .slide {
+        height: calc(100vh - 60px) !important;
+        padding: 15px 30px !important;
+    }
+    
+    .navigation {
+        height: 60px !important;
+    }
+    
+    .nav-btn {
+        width: 40px !important;
+        height: 40px !important;
+    }
+    
+    h1 { font-size: 28px !important; }
+    h2 { font-size: 22px !important; }
+}
+
+/* ========================================
+   CORREÇÕES ESPECÍFICAS - BOTÕES DE DOWNLOAD
+   ======================================== */
+
+/* Esconder botões durante transições */
+.slide:not(.active) .download-buttons,
+.slide:not(.active) div[style*="position: fixed"] {
+    display: none !important;
+    opacity: 0 !important;
+    visibility: hidden !important;
+    pointer-events: none !important;
+}
+
+/* Garantir que botões só aparecem no slide ativo */
+.slide.active .download-buttons,
+.slide.active div[style*="position: fixed"][style*="bottom"] {
+    display: flex !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+    pointer-events: auto !important;
+    transition: opacity 0.3s ease 0.5s !important;
+}
+
+/* Correção específica para os botões de download com texto */
+@media screen and (max-width: 1366px) {
+    /* BOTÕES DE DOWNLOAD - REPOSICIONADOS */
+    .download-buttons,
+    div[style*="position: fixed"][style*="bottom"] {
+        position: fixed !important;
+        bottom: 100px !important;
+        right: 20px !important;
+        top: auto !important;
+        display: flex !important;
+        flex-direction: column !important;
+        gap: 10px !important;
+        z-index: 500 !important;
+    }
+    
+    /* Forçar exibição do texto nos botões */
+    .download-buttons a,
+    div[style*="position: fixed"] a,
+    .download-btn,
+    a[href*="docs"],
+    a[href*=".pptx"],
+    a[href*=".docx"],
+    a[href*=".pdf"] {
+        padding: 10px 16px !important;
+        font-size: 13px !important;
+        min-width: 140px !important;
+        opacity: 0.95 !important;
+        border-radius: 25px !important;
+        white-space: nowrap !important;
+        background: white !important;
+        box-shadow: 0 2px 10px rgba(0,0,0,0.15) !important;
+        color: var(--norauto-blue) !important;
+        text-decoration: none !important;
+        display: inline-flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+        font-weight: 500 !important;
+        border: 2px solid var(--norauto-blue) !important;
+        transition: all 0.3s ease !important;
+    }
+    
+    /* Hover effect */
+    .download-buttons a:hover,
+    div[style*="position: fixed"] a:hover {
+        background: var(--norauto-blue) !important;
+        color: white !important;
+        transform: translateY(-2px) !important;
+        box-shadow: 0 4px 15px rgba(0,0,0,0.2) !important;
+    }
+    
+    /* Ícone antes do texto */
+    .download-buttons a::before,
+    div[style*="position: fixed"] a::before {
+        content: "📄" !important;
+        margin-right: 8px !important;
+        font-size: 16px !important;
+    }
+    
+    /* Específico para PPTX */
+    a[href*=".pptx"]::before {
+        content: "📊" !important;
+    }
+    
+    /* Específico para DOCX */
+    a[href*=".docx"]::before {
+        content: "📝" !important;
+    }
+}
+
+/* Mobile - botões menores mas com texto */
+@media screen and (max-width: 768px) {
+    .download-buttons,
+    div[style*="position: fixed"][style*="bottom"] {
+        bottom: 90px !important;
+        right: 10px !important;
+    }
+    
+    .download-buttons a,
+    div[style*="position: fixed"] a {
+        padding: 8px 12px !important;
+        font-size: 11px !important;
+        min-width: 110px !important;
+    }
+    
+    .download-buttons a::before,
+    div[style*="position: fixed"] a::before {
+        font-size: 14px !important;
+        margin-right: 5px !important;
+    }
+}
+
+/* Mobile muito pequeno */
+@media screen and (max-width: 375px) {
+    .download-buttons a,
+    div[style*="position: fixed"] a {
+        padding: 6px 10px !important;
+        font-size: 10px !important;
+        min-width: 90px !important;
+    }
+}
+
+/* ========================================
+   CORREÇÃO DE TRANSIÇÕES DE SLIDES
+   ======================================== */
+
+/* Durante a transição, esconder elementos fixos */
+.presentation-container.transitioning .download-buttons,
+.presentation-container.transitioning div[style*="position: fixed"][style*="bottom"] {
+    opacity: 0 !important;
+    visibility: hidden !important;
+}
+
+/* Garantir z-index correto durante transições */
+.slide {
+    transition: opacity 0.5s ease, transform 0.5s ease !important;
+}
+
+.slide:not(.active) {
+    z-index: 1 !important;
+    pointer-events: none !important;
+}
+
+.slide.active {
+    z-index: 10 !important;
+    pointer-events: auto !important;
+}
+
+/* Esconder completamente elementos de slides inativos */
+.slide:not(.active) * {
+    pointer-events: none !important;
+}
+
+.slide:not(.active) .download-buttons,
+.slide:not(.active) > div[style*="position: fixed"] {
+    display: none !important;
+}
+
+/* ========================================
+   CORREÇÃO ESPECÍFICA - SLIDE 10 (ROADMAP E REFERÊNCIAS)
+   ======================================== */
+
+/* Slide 10 - Ajustes gerais */
+.slide:nth-child(10) {
+    overflow-y: auto !important;
+    overflow-x: hidden !important;
+}
+
+/* Desktop e Laptop - Slide 10 */
+@media screen and (min-width: 1367px) {
+    .slide:nth-child(10) h2 {
+        margin-bottom: 20px !important;
+    }
+    
+    .slide:nth-child(10) ul {
+        columns: 2 !important;
+        column-gap: 40px !important;
+    }
+}
+
+/* Landscape Mode - Tablets e Móveis */
+@media screen and (orientation: landscape) and (max-width: 1366px) {
+    /* Ajuste específico do slide 10 */
+    .slide:nth-child(10) {
+        padding: 15px 25px !important;
+        height: calc(100vh - 60px) !important;
+    }
+    
+    .slide:nth-child(10) h1 {
+        font-size: 26px !important;
+        margin-bottom: 12px !important;
+        padding-bottom: 8px !important;
+    }
+    
+    .slide:nth-child(10) h2 {
+        font-size: 20px !important;
+        margin: 12px 0 10px 0 !important;
+        padding-left: 25px !important;
+    }
+    
+    .slide:nth-child(10) h2::before {
+        font-size: 18px !important;
+        left: 0 !important;
+    }
+    
+    /* Container das fases - layout horizontal com scroll */
+    .slide:nth-child(10) > div:nth-of-type(2) {
+        margin: 15px 0 !important;
+    }
+    
+    .slide:nth-child(10) div[style*="display: flex"][style*="justify-content: space-between"] {
+        display: flex !important;
+        flex-direction: row !important;
+        justify-content: flex-start !important;
+        align-items: stretch !important;
+        gap: 12px !important;
+        overflow-x: auto !important;
+        overflow-y: hidden !important;
+        padding: 10px 5px 15px 5px !important;
+        margin: 10px 0 !important;
+        min-height: 130px !important;
+        max-height: 150px !important;
+        -webkit-overflow-scrolling: touch !important;
+        position: relative !important;
+    }
+    
+    /* Fases do roadmap - cards compactos */
+    .slide:nth-child(10) div[style*="flex: 0 0 23%"],
+    .slide:nth-child(10) div[style*="border-radius: 15px"][style*="padding"] {
+        flex: 0 0 250px !important;
+        min-width: 250px !important;
+        max-width: 250px !important;
+        min-height: 110px !important;
+        max-height: 130px !important;
+        padding: 10px 12px !important;
+        margin: 0 !important;
+        font-size: 11px !important;
+        line-height: 1.3 !important;
+        border-radius: 10px !important;
+        border-width: 2px !important;
+        display: flex !important;
+        flex-direction: column !important;
+    }
+    
+    .slide:nth-child(10) div[style*="flex: 0 0 23%"] h3,
+    .slide:nth-child(10) div[style*="border-radius: 15px"] h3 {
+        font-size: 13px !important;
+        margin-bottom: 6px !important;
+        font-weight: 600 !important;
+        color: inherit !important;
+    }
+    
+    .slide:nth-child(10) div[style*="flex: 0 0 23%"] p,
+    .slide:nth-child(10) div[style*="border-radius: 15px"] p {
+        font-size: 10px !important;
+        line-height: 1.3 !important;
+        margin: 3px 0 !important;
+        overflow: hidden !important;
+        text-overflow: ellipsis !important;
+        display: -webkit-box !important;
+        -webkit-line-clamp: 4 !important;
+        -webkit-box-orient: vertical !important;
+    }
+    
+    /* Setas entre fases - visíveis e compactas */
+    .slide:nth-child(10) div[style*="flex: 0 0 6%"],
+    .slide:nth-child(10) div[style*="display: flex"][style*="align-items: center"][style*="justify-content: center"] {
+        display: flex !important;
+        flex: 0 0 25px !important;
+        min-width: 25px !important;
+        max-width: 25px !important;
+        align-items: center !important;
+        justify-content: center !important;
+        font-size: 16px !important;
+        color: var(--norauto-orange) !important;
+        opacity: 0.8 !important;
+    }
+    
+    /* Referências - layout em 2 colunas compactas */
+    .slide:nth-child(10) > div:last-child {
+        margin-top: 10px !important;
+    }
+    
+    .slide:nth-child(10) ul {
+        margin: 8px 0 !important;
+        padding-left: 20px !important;
+        columns: 2 !important;
+        column-gap: 30px !important;
+        max-height: calc(100vh - 280px) !important;
+        overflow-y: auto !important;
+    }
+    
+    .slide:nth-child(10) li {
+        font-size: 10px !important;
+        line-height: 1.4 !important;
+        margin: 3px 0 !important;
+        break-inside: avoid !important;
+        page-break-inside: avoid !important;
+    }
+    
+    /* Scrollbar estilizada para o roadmap */
+    .slide:nth-child(10) div[style*="display: flex"]::-webkit-scrollbar {
+        height: 5px !important;
+    }
+    
+    .slide:nth-child(10) div[style*="display: flex"]::-webkit-scrollbar-track {
+        background: #f1f1f1 !important;
+        border-radius: 3px !important;
+    }
+    
+    .slide:nth-child(10) div[style*="display: flex"]::-webkit-scrollbar-thumb {
+        background: var(--norauto-orange) !important;
+        border-radius: 3px !important;
+    }
+    
+    /* Scrollbar para referências se necessário */
+    .slide:nth-child(10) ul::-webkit-scrollbar {
+        width: 4px !important;
+    }
+    
+    .slide:nth-child(10) ul::-webkit-scrollbar-thumb {
+        background: #ccc !important;
+        border-radius: 2px !important;
+    }
+}
+
+/* Mobile Landscape específico - telas menores */
+@media screen and (orientation: landscape) and (max-width: 768px) and (max-height: 500px) {
+    .slide:nth-child(10) {
+        padding: 10px 20px !important;
+    }
+    
+    .slide:nth-child(10) h1 {
+        font-size: 22px !important;
+        margin-bottom: 8px !important;
+    }
+    
+    .slide:nth-child(10) h2 {
+        font-size: 17px !important;
+        margin: 10px 0 8px 0 !important;
+    }
+    
+    /* Fases ainda menores */
+    .slide:nth-child(10) div[style*="flex: 0 0 23%"],
+    .slide:nth-child(10) div[style*="border-radius: 15px"][style*="padding"] {
+        flex: 0 0 220px !important;
+        min-width: 220px !important;
+        min-height: 100px !important;
+        padding: 8px 10px !important;
+    }
+    
+    .slide:nth-child(10) div[style*="flex: 0 0 23%"] h3 {
+        font-size: 12px !important;
+        margin-bottom: 4px !important;
+    }
+    
+    .slide:nth-child(10) div[style*="flex: 0 0 23%"] p {
+        font-size: 9px !important;
+        -webkit-line-clamp: 3 !important;
+    }
+    
+    /* Referências ainda mais compactas */
+    .slide:nth-child(10) li {
+        font-size: 9px !important;
+        margin: 2px 0 !important;
+    }
+    
+    .slide:nth-child(10) ul {
+        max-height: calc(100vh - 250px) !important;
+    }
+}
+
+/* Portrait Mode - manter layout vertical */
+@media screen and (orientation: portrait) and (max-width: 1366px) {
+    .slide:nth-child(10) div[style*="display: flex"][style*="justify-content: space-between"] {
+        flex-direction: column !important;
+        overflow-x: hidden !important;
+        overflow-y: auto !important;
+        max-height: none !important;
+    }
+    
+    .slide:nth-child(10) div[style*="flex: 0 0 23%"] {
+        flex: none !important;
+        width: 100% !important;
+        min-width: auto !important;
+        max-width: 100% !important;
+        min-height: auto !important;
+        max-height: none !important;
+    }
+    
+    .slide:nth-child(10) div[style*="flex: 0 0 6%"] {
+        display: none !important;
+    }
+    
+    .slide:nth-child(10) ul {
+        columns: 1 !important;
+        max-height: none !important;
+    }
+}
+
+/* Indicador visual de scroll horizontal para o roadmap */
+@media screen and (orientation: landscape) and (max-width: 1366px) {
+    .slide:nth-child(10) div[style*="display: flex"][style*="justify-content: space-between"]::after {
+        position: absolute !important;
+        bottom: 0px !important;
+        right: 10px !important;
+        font-size: 9px !important;
+        color: var(--norauto-orange) !important;
+        opacity: 0.7 !important;
+        background: rgba(255,255,255,0.9) !important;
+        padding: 2px 6px !important;
+        border-radius: 10px !important;
+        animation: slideHint 2s ease-in-out infinite !important;
+    }
+}
+/* ========================================
+   CORREÇÃO ESPECÍFICA - SLIDE 11 (ROADMAP)
+   ======================================== */
+
+/* Slide 11 - Ajustes gerais */
+.slide:nth-child(11) {
+    overflow-y: auto !important;
+    overflow-x: hidden !important;
+}
+
+/* Desktop e Laptop - Slide 11 */
+@media screen and (min-width: 1367px) {
+    .slide:nth-child(11) .roadmap-container,
+    .slide:nth-child(11) div[style*="display: flex"][style*="justify-content: space-between"] {
+        display: flex !important;
+        justify-content
+
     </style>
             
             <h3>📚 Referências Principais</h3>
